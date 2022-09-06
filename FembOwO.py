@@ -1,5 +1,11 @@
 import discord
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+secret_token = os.getenv("TOKEN")
 
 #json config load
 with open('config.json', 'r') as json_config:
@@ -26,4 +32,4 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run('OTk3MTkxMDg1MTQxMDEyNTYx.GBHqkU.glenMF01WdtFPOqg1Umsxa5ovqRZGQtdxTB6vI')
+client.run(secret_token)
