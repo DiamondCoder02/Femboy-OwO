@@ -17,7 +17,7 @@ json_config.close
 
 intents = discord.Intents.default()
 intents.message_content = True
-client = commands.Bot(intents=intents, command_prefix='.')
+client = commands.Bot(intents=intents, command_prefix='+')
 
 @client.command()
 async def facts(ctx, number):
